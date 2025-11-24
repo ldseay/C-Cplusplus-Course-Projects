@@ -32,6 +32,7 @@ int main(void)
 		free(f_name);
 		return 1;
 	}
+	//replace \n with \0
 	f_name[read - 1] = '\0';
 
 	printf("Last name: ");
@@ -43,6 +44,7 @@ int main(void)
 		free(l_name);
 		return 1;
 	}
+	//replace \n with \0
 	l_name[read - 1] = '\0';
 
 	printf("Birth year: ");
