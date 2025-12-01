@@ -29,7 +29,7 @@ int main(void)
 	std::cout << "Enter month (1-12): ";
 	std::cin >> month;
 
-	if ((std::cin.fail()) || (month < 0) || (month > 12)) {
+	if ((std::cin.fail()) || (month <= 0) || (month > 12)) {
 		std::cout << "Month name:         " << months[0] << std::endl;
 		std::cout << "Days in month:      0\n\nBye!" << std::endl;
 		return 1;

@@ -28,7 +28,7 @@ int main(void)
 	printf("Enter month (1-12): ");
 	scanf_exit = scanf(" %d", &month);
 
-	if ((scanf_exit != 1) || (month < 0) || (month > 12)) {
+	if ((scanf_exit != 1) || (month <= 0) || (month > 12)) {
 		printf("Month name:         %s\n", months[0]);
 		printf("Days in month:      0\n");
 		return 1;
