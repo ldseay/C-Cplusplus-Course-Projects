@@ -27,13 +27,15 @@ int main(void)
 	ssize_t num_read = 0;
 
 	while ((num_read = getline(&line, &len, fh) != -1)) {
-		if (ferror(fh)) {
-			perror("Getline failed");
-			free(line);
-			return 2;
-		}
 		printf("%s", line);
 	}
+	
+	if (ferror(fh)) {
+		perror("Getline failed");
+		free(line);
+		return 2;
+	}
+	
 	free(line);
 	fclose(fh);
 	return 0;
